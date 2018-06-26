@@ -1,10 +1,8 @@
 {
     "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
-      "vmname": {
-          "value": "simpleUbuntu"
-      },
+    "parameters":
+    { 
       "adminUsername": {
         "value": "taniaash"
       },
@@ -16,20 +14,11 @@
           "secretName": "ubuntuDefaultPassword"
         }
       },
-      "dnsLabelPrefix": {
-        "value": "tanniaashdns"
-      },
       "vnetName":{
         "value": "ubuntuVnet"
       },
-      "vnetPrefix":{
-        "value":  "10.0.0.0/16"
-      },
       "subnetName": {
-          "value": "Subnet"
-      },
-      "subnetPrefix": {
-          "value": "10.0.0.0/24"
+          "value": "ubuntuSubnet"
       }
     }
   }
