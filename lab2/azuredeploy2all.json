@@ -1,0 +1,426 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "sites_taniaashwa_name": {
+            "defaultValue": "taniaashwa",
+            "type": "String"
+        },
+        "serverfarms_taniaashwa_plan_name": {
+            "defaultValue": "taniaashwa-plan",
+            "type": "String"
+        },
+        "config_web_name": {
+            "defaultValue": "web",
+            "type": "String"
+        },
+        "storageAccounts_lab1ta1sa1_name": {
+            "defaultValue": "lab1ta1sa1",
+            "type": "String"
+        },
+        "storageAccounts_workshoptasa1_name": {
+            "defaultValue": "workshoptasa1",
+            "type": "String"
+        },
+        "storageAccounts_taniaashjqyrcrz3ruyec_name": {
+            "defaultValue": "taniaashjqyrcrz3ruyec",
+            "type": "String"
+        },
+        "storageAccounts_lab1ta1sa1jqyrcrz3ruyec_name": {
+            "defaultValue": "lab1ta1sa1jqyrcrz3ruyec",
+            "type": "String"
+        },
+        "hostNameBindings_taniaashwa.azurewebsites.net_name": {
+            "defaultValue": "taniaashwa.azurewebsites.net",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd/resourceGroups/lab1ta1/providers/Microsoft.Storage/storageAccounts/lab1ta1sa1jqyrcrz3ruyec'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_LRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_lab1ta1sa1jqyrcrz3ruyec_name')]",
+            "apiVersion": "2018-02-01",
+            "location": "westeurope",
+            "tags": {
+                "displayName": "lab1ta1sa1jqyrcrz3ruyec",
+                "Description": "none",
+                "Owner": "tania.ash@cloudreach.com",
+                "KillDate": "none",
+                "Environment": "Cloud Enablement"
+            },
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": false,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd/resourceGroups/lab1ta1/providers/Microsoft.Storage/storageAccounts/lab1ta1sa1'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_LRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_lab1ta1sa1_name')]",
+            "apiVersion": "2018-02-01",
+            "location": "westeurope",
+            "tags": {
+                "displayName": "lab1ta1sa1",
+                "Description": "none",
+                "Owner": "tania.ash@cloudreach.com",
+                "KillDate": "none",
+                "Environment": "Cloud Enablement"
+            },
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": false,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd/resourceGroups/lab1ta1/providers/Microsoft.Storage/storageAccounts/taniaashjqyrcrz3ruyec'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_LRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_taniaashjqyrcrz3ruyec_name')]",
+            "apiVersion": "2018-02-01",
+            "location": "westeurope",
+            "tags": {
+                "displayName": "taniaashjqyrcrz3ruyec",
+                "Description": "none",
+                "Owner": "tania.ash@cloudreach.com",
+                "KillDate": "none",
+                "Environment": "Cloud Enablement"
+            },
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": false,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd/resourceGroups/lab1ta1/providers/Microsoft.Storage/storageAccounts/workshoptasa1'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_LRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_workshoptasa1_name')]",
+            "apiVersion": "2018-02-01",
+            "location": "westeurope",
+            "tags": {
+                "displayName": "workshoptasa1",
+                "Description": "none",
+                "Owner": "tania.ash@cloudreach.com",
+                "KillDate": "none",
+                "Environment": "Cloud Enablement"
+            },
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": false,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd/resourceGroups/lab1ta1/providers/Microsoft.Web/serverfarms/taniaashwa-plan'.",
+            "type": "Microsoft.Web/serverfarms",
+            "sku": {
+                "name": "F1",
+                "tier": "Free",
+                "size": "F1",
+                "family": "F",
+                "capacity": 0
+            },
+            "kind": "app",
+            "name": "[parameters('serverfarms_taniaashwa_plan_name')]",
+            "apiVersion": "2016-09-01",
+            "location": "West Europe",
+            "tags": {
+                "Description": "none",
+                "Environment": "Cloud Enablement",
+                "KillDate": "none",
+                "Owner": "none"
+            },
+            "scale": null,
+            "properties": {
+                "name": "[parameters('serverfarms_taniaashwa_plan_name')]",
+                "workerTierName": null,
+                "adminSiteName": null,
+                "hostingEnvironmentProfile": null,
+                "perSiteScaling": false,
+                "reserved": false,
+                "targetWorkerCount": 0,
+                "targetWorkerSizeId": 0
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd/resourceGroups/lab1ta1/providers/Microsoft.Web/sites/taniaashwa'.",
+            "type": "Microsoft.Web/sites",
+            "kind": "app",
+            "name": "[parameters('sites_taniaashwa_name')]",
+            "apiVersion": "2016-08-01",
+            "location": "West Europe",
+            "tags": {
+                "hidden-related:/subscriptions/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd/resourcegroups/lab1ta1/providers/Microsoft.Web/serverfarms/taniaashwa-plan": "empty",
+                "Description": "none",
+                "Environment": "Cloud Enablement",
+                "KillDate": "none",
+                "Owner": "none"
+            },
+            "scale": null,
+            "properties": {
+                "enabled": true,
+                "hostNameSslStates": [
+                    {
+                        "name": "[concat(parameters('sites_taniaashwa_name'),'.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Standard"
+                    },
+                    {
+                        "name": "[concat(parameters('sites_taniaashwa_name'),'.scm.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Repository"
+                    }
+                ],
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_taniaashwa_plan_name'))]",
+                "reserved": false,
+                "siteConfig": null,
+                "scmSiteAlsoStopped": false,
+                "hostingEnvironmentProfile": null,
+                "clientAffinityEnabled": true,
+                "clientCertEnabled": false,
+                "hostNamesDisabled": false,
+                "containerSize": 0,
+                "dailyMemoryTimeQuota": 0,
+                "cloningInfo": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_taniaashwa_plan_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd/resourceGroups/lab1ta1/providers/Microsoft.Web/sites/taniaashwa/config/web'.",
+            "type": "Microsoft.Web/sites/config",
+            "name": "[concat(parameters('sites_taniaashwa_name'), '/', parameters('config_web_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "West Europe",
+            "tags": {
+                "hidden-related:/subscriptions/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd/resourcegroups/lab1ta1/providers/Microsoft.Web/serverfarms/taniaashwa-plan": "empty",
+                "Description": "none",
+                "Environment": "Cloud Enablement",
+                "KillDate": "none",
+                "Owner": "none"
+            },
+            "scale": null,
+            "properties": {
+                "numberOfWorkers": 1,
+                "defaultDocuments": [
+                    "Default.htm",
+                    "Default.html",
+                    "Default.asp",
+                    "index.htm",
+                    "index.html",
+                    "iisstart.htm",
+                    "default.aspx",
+                    "index.php",
+                    "hostingstart.html"
+                ],
+                "netFrameworkVersion": "v4.0",
+                "phpVersion": "5.6",
+                "pythonVersion": "",
+                "nodeVersion": "",
+                "linuxFxVersion": "",
+                "windowsFxVersion": null,
+                "requestTracingEnabled": false,
+                "remoteDebuggingEnabled": false,
+                "remoteDebuggingVersion": null,
+                "httpLoggingEnabled": false,
+                "logsDirectorySizeLimit": 35,
+                "detailedErrorLoggingEnabled": false,
+                "publishingUsername": "$taniaashwa",
+                "publishingPassword": null,
+                "appSettings": null,
+                "metadata": null,
+                "connectionStrings": null,
+                "machineKey": null,
+                "handlerMappings": null,
+                "documentRoot": null,
+                "scmType": "None",
+                "use32BitWorkerProcess": true,
+                "webSocketsEnabled": false,
+                "alwaysOn": false,
+                "javaVersion": null,
+                "javaContainer": null,
+                "javaContainerVersion": null,
+                "appCommandLine": "",
+                "managedPipelineMode": "Integrated",
+                "virtualApplications": [
+                    {
+                        "virtualPath": "/",
+                        "physicalPath": "site\\wwwroot",
+                        "preloadEnabled": false,
+                        "virtualDirectories": null
+                    }
+                ],
+                "winAuthAdminState": 0,
+                "winAuthTenantState": 0,
+                "customAppPoolIdentityAdminState": false,
+                "customAppPoolIdentityTenantState": false,
+                "runtimeADUser": null,
+                "runtimeADUserPassword": null,
+                "loadBalancing": "LeastRequests",
+                "routingRules": [],
+                "experiments": {
+                    "rampUpRules": []
+                },
+                "limits": null,
+                "autoHealEnabled": false,
+                "autoHealRules": null,
+                "tracingOptions": null,
+                "vnetName": "",
+                "siteAuthEnabled": false,
+                "siteAuthSettings": {
+                    "enabled": null,
+                    "unauthenticatedClientAction": null,
+                    "tokenStoreEnabled": null,
+                    "allowedExternalRedirectUrls": null,
+                    "defaultProvider": null,
+                    "clientId": null,
+                    "clientSecret": null,
+                    "issuer": null,
+                    "allowedAudiences": null,
+                    "additionalLoginParams": null,
+                    "isAadAutoProvisioned": false,
+                    "googleClientId": null,
+                    "googleClientSecret": null,
+                    "googleOAuthScopes": null,
+                    "facebookAppId": null,
+                    "facebookAppSecret": null,
+                    "facebookOAuthScopes": null,
+                    "twitterConsumerKey": null,
+                    "twitterConsumerSecret": null,
+                    "microsoftAccountClientId": null,
+                    "microsoftAccountClientSecret": null,
+                    "microsoftAccountOAuthScopes": null
+                },
+                "cors": null,
+                "push": null,
+                "apiDefinition": null,
+                "autoSwapSlotName": null,
+                "localMySqlEnabled": false,
+                "managedServiceIdentityId": null,
+                "xManagedServiceIdentityId": null,
+                "ipSecurityRestrictions": null,
+                "http20Enabled": false,
+                "minTlsVersion": "1.0",
+                "ftpsState": "AllAllowed"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_taniaashwa_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd/resourceGroups/lab1ta1/providers/Microsoft.Web/sites/taniaashwa/hostNameBindings/taniaashwa.azurewebsites.net'.",
+            "type": "Microsoft.Web/sites/hostNameBindings",
+            "name": "[concat(parameters('sites_taniaashwa_name'), '/', parameters('hostNameBindings_taniaashwa.azurewebsites.net_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "West Europe",
+            "scale": null,
+            "properties": {
+                "siteName": "taniaashwa",
+                "domainId": null,
+                "hostNameType": "Verified"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_taniaashwa_name'))]"
+            ]
+        }
+    ]
+}

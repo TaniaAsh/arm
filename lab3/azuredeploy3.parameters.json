@@ -1,0 +1,26 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "adminUsername": {
+        "value": "taniaash"
+      },
+      "adminPassword": {
+        "reference": {
+          "keyVault": {
+            "id": "/subscriptions/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd/resourcegroups/lab3takeys"
+          },
+          "secretName": "ubuntuDefaultPassword"
+        }
+      },
+      "dnsLabelPrefix": {
+        "value": "tanniaashdns"
+      },
+      "vnetName": {
+          "value": "ubuntuVnet"
+      },
+      "subnetName": {
+          "value": "UbuntuSubnet"
+      }
+    }
+  }
