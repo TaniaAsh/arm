@@ -8,7 +8,7 @@
       "adminPassword": {
         "reference": {
           "keyVault": {
-            "id": "/subscriptions/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd/resourcegroups/lab3takeys"
+            "id": "/subscriptions/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd/resourceGroups/lab3takeys/providers/Microsoft.KeyVault/vaults/keysta"
           },
           "secretName": "ubuntuDefaultPassword"
         }
@@ -16,11 +16,17 @@
       "dnsLabelPrefix": {
         "value": "tanniaashdns"
       },
-      "vnetName": {
-          "value": "ubuntuVnet"
+      "vnetName":{
+        "value": "ubuntuVnet"
+      },
+      "vnetPrefix":{
+        "value":  "10.0.0.0/16"
       },
       "subnetName": {
-          "value": "UbuntuSubnet"
+          "value": "Subnet"
+      },
+      "subnetPrefix": {
+          "value": "10.0.0.0/24"
       }
     }
   }
