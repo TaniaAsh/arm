@@ -5,18 +5,16 @@
       "adminUsername": {
         "value": "taniaash"
       },
-      "adminPassword": {
-        "reference": {
-          "keyVault": {
-            "id": "/subscriptions/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd/resourceGroups/lab3takeys/providers/Microsoft.KeyVault/vaults/keysta"
-          },
-          "secretName": "ubuntuDefaultPassword"
-        }
-      },
-      "vnetName": {
+      "keyVaultName": {
+        "value": "keysta"        
+    },
+    "secretName": {
+        "value": "ubuntuDefaultPassword"
+    },
+    "vnetName": {
           "value": "ubuntuVnet"
       },
-      "subnetName": {
+    "subnetName": {
           "value": "ubuntuSubnet"
       }
     }
