@@ -5,6 +5,9 @@
     "adminUsername": {
       "value": "taniaash"
     },
+    "numberOfDataDisks": {
+      "value": 2
+    },
     "adminPassword": {
       "reference": {
         "keyVault": {

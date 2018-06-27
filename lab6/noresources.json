@@ -1,0 +1,72 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "peer": {
+          "type": "bool",
+          "allowedValues": [ true, false ],
+          "defaultValue": false
+        },
+        "hub": {
+          "type": "object",
+          "defaultValue": {
+            "resourceGroup": "core",
+            "vnet": {
+              "name": "Core"
+            }
+          },
+          "metadata": {
+                "description": "Info for an existing hub or core vNet.  Required if peer==true.  Assumed to be within the same subscription."
+          }
+        },
+        "spoke": {
+          "type": "object",
+          "defaultValue": {
+            "vnet": {
+              "name": "Spoke",
+              "addressPrefixes": [ "10.99.0.0/16" ]
+            },
+            "subnets": [
+              { "name": "subnet1", "addressPrefix": "10.99.0.0/24" },
+              { "name": "subnet2", "addressPrefix": "10.99.1.0/24" }
+            ]
+          },
+          "metadata": {
+            "description": "Complex object containing information for the spoke vNet.  See defaultValue for example."
+          }
+        }
+      },
+    "variables": {},
+    "resources": [],
+    "outputs": {
+        "peerValue": {
+            "type": "bool",
+            "value": "true"
+          },
+          "hubName": {
+              "type": "string",
+              "value": "testName"
+          },
+          "vNets": {
+            "type": "array",
+            "value": []
+        },
+          "testobj": {
+              "type": "object",
+              "value": "[variables(concat('vmSize', parameters('vmSize'))).diskSize]"
+          },
+          "testInt": {
+              "type": "int",
+              "value": 1
+          },
+          "vmSubnets": {
+              "type": "array",
+              "value": "[variables(concat('vmSize', parameters('vmSize'))).defaultSubnets]"
+          },
+          "description": {
+                "type": "string",
+                "value": "test description"
+          }
+        }  
+    }
+}
