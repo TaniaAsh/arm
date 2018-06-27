@@ -2,18 +2,16 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-         
-        
-        "keyVaultName": {
+        "adminUsername": {
             "type": "string",
             "metadata": {
-                "description": "Key Vault name"
+                "description": "User name for the Virtual Machine."
             }
         },
-        "secretName": {
-            "type": "string",
+        "adminPassword": {
+            "type": "securestring",
             "metadata": {
-                "description": "secretName parameter"
+                "description": "Password for the Virtual Machine."
             }
         },
         "vmName": {
@@ -44,10 +42,10 @@
             }
         },
         "numberOfDataDisks": {
-            "type": "int",
-            "defaultValue": 1,
-            "maxValue": 2,
-            "metadata": {
+           "type": "int",
+           "defaultValue": 1,
+           "maxValue": 2,
+           "metadata": {
                 "description": "Number of data disks for the virtual machine"
             }
         },
